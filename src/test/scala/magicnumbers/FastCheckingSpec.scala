@@ -10,6 +10,6 @@ class FastCheckingSpec extends AnyFlatSpec {
 
   "Magic number checker" should "handle edge cases" in {
     assert(MagicNumbers.isMagicNumber(1))
-    assert(!MagicNumbers.isMagicNumber(0))
+    assert(MagicNumbers.isMagicNumber(0))
   }
 }

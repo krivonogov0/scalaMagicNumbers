@@ -2,6 +2,8 @@ package magicnumbers
 
 object MagicNumbers {
   def isMagicNumber(num: BigInt): Boolean = {
+    if (num == 0) return true
+    
     val strNum = num.toString
     for (i <- 1 to strNum.length) {
       val part = strNum.substring(0, i).toLong
@@ -13,7 +15,11 @@ object MagicNumbers {
   def countDigits(num: BigInt): Int = num.toString.length
 
   def findMagicNumbers(limit: BigInt): Map[Int, List[BigInt]] = {
-    (BigInt(1) to limit).filter(isMagicNumber).groupBy(countDigits)
+    Iterator.iterate(BigInt(1))(_ + 1)
+      .takeWhile(_ <= limit)
+      .filter(isMagicNumber)
+      .toList
+      .groupBy(countDigits)
   }
 
   def findPandigitalMagicNumbers(magicNumbers: List[BigInt]): (BigInt, BigInt) = {

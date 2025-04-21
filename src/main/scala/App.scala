@@ -2,7 +2,7 @@ package magicnumbers
 
 object App {
   def main(args: Array[String]): Unit = {
-    val limit = BigInt("1000000") // Ограничение для поиска магических чисел
+    val limit = BigInt("1000000000") // Ограничение для поиска магических чисел
     val magicNumbers = MagicNumbers.findMagicNumbers(limit)
 
     println("Magic number counts by number of digits:")
