@@ -57,16 +57,4 @@
 
 ## Пример вывода
 
-```bash
-Magic number counts by number of digits:
-1: 10
-2: 45
-3: 150
-4: 375
-5: 750
-...
-Total: 20457 magic numbers
-Largest is 3608528850368400786036725
-Minimally pandigital 1-9 magic numbers: 381654729
-Minimally pandigital 0-9 magic numbers: 3816547290
-```
+![Пример вывода](assets/console_output.png)
